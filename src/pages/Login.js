@@ -2,13 +2,14 @@
 
 import React, { useState } from 'react';
 import { account } from '../appwrite/config';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+ 
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -20,48 +21,49 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if(email===""||password===""){
+    if (email === "" || password === "") {
       alert('enter valid details')
     }
-    else{
+    else {
       login()
     }
   };
 
-  const login = async() =>{
-    try{
-      const x = await account.createEmailSession(email,password)
+  const login = async () => {
+    try {
+      const x = await account.createEmailSession(email, password)
+      console.log(x)
       navigate('/Dashboard')
     }
-    catch(e){
+    catch (e) {
       console.log(e)
     }
   }
 
   return (
-    <div className="login-container">
-      <div className="login-form">
-        <h2 className='login_text'>Welcome, Login...</h2>
-        <div className="form-group">
-          <label>Email:</label>
-          <input
-            type="email"
-            placeholder="Enter your email..."
+    <div className='login'>
+      <form onSubmit={handleLogin}>
+        <div className="mb-3">
+          <label className="form-label">Email address</label>
+          <input type="email"
+            className="form-control"
+            placeholder='Enter email...'
             value={email}
             onChange={handleEmailChange}
           />
+          <div className="form-text">We'll never share your email with anyone else.</div>
         </div>
-        <div className="form-group">
-          <label>Password:</label>
-          <input
-            type="password"
-            placeholder="Enter your password..."
+        <div className="mb-3">
+          <label className="form-label">Password</label>
+          <input type="password"
+            className="form-control"
+            placeholder='Enter password...'
             value={password}
             onChange={handlePasswordChange}
           />
         </div>
-        <button onClick={handleLogin}>Login</button>
-      </div>
+        <button type="submit" className="btn btn-primary">Login</button>
+      </form>
     </div>
   );
 };

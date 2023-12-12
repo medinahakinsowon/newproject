@@ -1,11 +1,72 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
 body{
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
   background-color: black;
 }
 
+.background_image{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
 
+.home_text{
+  position: absolute;
+  width: 40px;
+  top: 100px;
+  right: 600px;
+  font-family: 'Lato', sans-serif;
+  font-size: 6rem;
+  color: #fff;
+  font-weight: 900;
+}
+.logo_Image{
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 200px;
+}
+.buttons_section{
+  position: absolute;
+  top: 500px;
+  right: 900px;
+}
+.register_button,
+.login_button{
+  margin-right: 20px;
+  padding: 10px 15px;
+  width: 220px;
+  height: 50px;
+  background-color: transparent;
+  color: #F8EC09;
+  font-family: 'Lato', sans-serif;
+  border: 2px solid white;
+  border-radius: 25px;
+  font-weight: 500;
+  box-shadow: 4px 4px 0px 0px rgba(19, 1, 1, 0.2);
+}
+ 
+.register_button:hover{
+  background-color: black;
+}
+
+.login_button:hover{
+  background-color: black;
+}
 
 .Register{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +101,12 @@ input {
   box-sizing: border-box;
 }
 input::placeholder{
-  font-family: 'Segoe UI';
+  font-family: 'Lato', sans-serif;
+  color: black;
+  font-weight: 600;
+}
+textarea::placeholder{
+  font-family: 'Lato', sans-serif;
   color: black;
   font-weight: 600;
 }
@@ -55,36 +121,17 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: black;
 }
 
 
 /* Login.css */
 
-.login-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-.login_text{
-  font-family: 'Segoe UI';
-  font-weight: 800;
-  color: #ccc;
-  font-size: 30px;
-}
 
-.login-form {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 30px;
-  width: 400px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.form-group {
-  margin-bottom: 15px;
-}
+
+
+
 
 label {
   display: block;
@@ -111,16 +158,31 @@ button:hover {
 }
 
 
-.dashboard {
+.main_dashboard{
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.dashboard {
   align-items: center;
   padding: 20px;
-  background-color: #f0f0f0;
+  
+}
+.dashboard_name{
+  font-family: 'Segoe UI';
+  font-weight: 800;
+  color: #f0f0f0;
+}
+.dashboard_email{
+  font-family: 'Segoe UI';
+  font-size: 20px;
+  color: #f0f0f0;
 }
 
 .user-info {
-  text-align: right;
+  text-align: center;
 }
 
 .logout-button {
@@ -137,4 +199,60 @@ button:hover {
   background-color: #9ebed3;
 }
 
+.input_note_title{
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
 
+.input_note_content{
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.notes_app{
+  color: #fff;
+}
+
+.form-label{
+  font-family: 'Lato', sans-serif ;
+  color: #fff;
+}
+
+.update_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .home_page .home_text{
+    width: 10px;
+    top: 160px;
+    right: 450px;
+    font-size: 5rem;
+    color: #fff;
+    font-weight: 900;
+    text-shadow: 2px 2px #000000;
+  }
+
+  .home_page .buttons_section{
+    top: 500px;
+    left: 50px;
+  }
+
+  .main_dashboard{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+}
