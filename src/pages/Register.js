@@ -8,6 +8,7 @@ function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('')
+  
 
   // You can add your form submission logic here
 
@@ -36,15 +37,15 @@ function Register() {
     <div className="Register">
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label for="exampleInputName" className="form-label">Name</label>
+          <label  className="form-label">Name</label>
           <input type="text" className="form-control" name='name' placeholder='Enter name...' value={name} onChange={(e) => setName(e.target.value)} required />
         </div>
         <div className="mb-3">
-          <label for="exampleInputEmail" className="form-label">Email</label>
+          <label className="form-label">Email</label>
           <input type="email" className="form-control" name='email' placeholder='Enter mail...' value={email}  onChange={(e) => setEmail(e.target.value)} required/>
         </div>
         <div className="mb-3">
-          <label for="exampleInputPassword" className="form-label">Password</label>
+          <label className="form-label">Password</label>
           <input type="password" className="form-control" name='password' placeholder='Enter password...' value={password} onChange={(e) => setPassword(e.target.value)} required />
         </div>
         <button type="submit" className="btn btn-primary">Register</button>
