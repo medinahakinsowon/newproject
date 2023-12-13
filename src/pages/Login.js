@@ -23,8 +23,6 @@ const Login = () => {
     e.preventDefault();
     if (email === "" || password === "") {
       alert('enter valid details')
-    } else if(email !== 'email' || password !== 'password'){
-       alert('This account does not exist in our database')
     }
     else {
       login()

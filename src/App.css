@@ -260,7 +260,7 @@ button:hover {
 
 @media only screen and (max-width: 472px) {
   .home_page .home_text{
-    width: 10px;
+    width: 7px;
     top: 160px;
     right: 335px;
     font-size: 5rem;
