@@ -256,3 +256,32 @@ button:hover {
   }
 
 }
+
+
+@media only screen and (max-width: 472px) {
+  .home_page .home_text{
+    width: 10px;
+    top: 160px;
+    right: 335px;
+    font-size: 5rem;
+    color: #fff;
+    font-weight: 900;
+    text-shadow: 2px 2px #000000;
+  }
+
+  .home_page .buttons_section{
+    top: 500px;
+    left: 50px;
+  }
+
+  .main_dashboard{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+}
+
