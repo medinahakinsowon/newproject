@@ -63,6 +63,7 @@ const Login = () => {
           />
         </div>
         <button type="submit" className="btn btn-primary">Login</button>
+        <p className='text-white fs-5'>Ooops, your account is not opening, please<a href='/Register'>Register</a></p>
       </form>
     </div>
   );
