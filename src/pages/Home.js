@@ -10,7 +10,7 @@ const Home = () => {
       <div>
         <img src={backgroundImage} className='background_image' alt='reading-table' />
       </div>
-      <h2 className='home_text'>New Note Application</h2>
+      <h2 className='home_text'>New Note App</h2>
       <img src={logoImage} className='logo_Image' alt='logo' />
       <div className='buttons_section'>
         <button className='register_button' onClick={()=>{Navigate('/Register')}}>
