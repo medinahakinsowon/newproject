@@ -36,7 +36,11 @@ const Login = () => {
       navigate('/Dashboard')
     }
     catch (e) {
-      console.log(e)
+      if(e.type === "general_argument_invald"){
+        alert('Invalid credentials')
+      }else if(e.type === "user_invalid_credentials"){
+        alert('Invalid credentials')
+      }
     }
   }
 

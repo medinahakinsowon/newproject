@@ -29,7 +29,9 @@ function Register() {
       Navigate('/Login')
     }
     catch (e) {
-      console.log(e)
+      if(e.type === 'user_already_exists'){
+        alert('User already exists')
+      }
     }
   }
 
