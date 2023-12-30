@@ -26,7 +26,7 @@ function Register() {
     try {
       var x = await account.create('unique()', email, password, name)
       var session = await account.createEmailSession(email,password);
-      var emaillink = await account.createVerification('https://newproject-4j5uittjd-medinahakinsowon.vercel.app//Verify')
+      var emaillink = await account.createVerification('https://newproject-tau-brown.vercel.app/Verify')
       alert('A verification link as been sent to this email address, click the link to verify your account.')
       // console.log(x)
       // Navigate('/Login')
