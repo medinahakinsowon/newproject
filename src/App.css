@@ -285,3 +285,16 @@ button:hover {
 
 }
 
+
+.verify_body{
+  display: flex;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  color: #f0f0f0;
+}
+
+.verify_body a{
+  text-decoration: none;
+}

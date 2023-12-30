@@ -25,8 +25,11 @@ function Register() {
   const register = async () => {
     try {
       var x = await account.create('unique()', email, password, name)
-      console.log(x)
-      Navigate('/Login')
+      var session = await account.createEmailSession(email,password);
+      var emaillink = await account.createVerification('http://localhost:3000/Verify')
+      alert('A verification link as been sent to this email address, click the link to verify your account.')
+      // console.log(x)
+      // Navigate('/Login')
     }
     catch (e) {
       if(e.type === 'user_already_exists'){

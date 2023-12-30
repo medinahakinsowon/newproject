@@ -6,6 +6,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import UpdateNote from './pages/UpdateNote';
+import Verify from './pages/Verify';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   <main className='flex  h-screen'> 
     <BrowserRouter>
       <Routes>
+        <Route path='/Verify' element={<Verify/>}></Route>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/Register' element={<Register/>}></Route>
         <Route path='/Login' element={<Login/>}></Route>
