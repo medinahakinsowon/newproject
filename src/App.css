@@ -289,6 +289,8 @@ button:hover {
 .verify_body{
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-top: 20%;
   font-family: 'Lato', sans-serif;
   font-size: 30px;
   font-weight: 900;
@@ -297,4 +299,5 @@ button:hover {
 
 .verify_body a{
   text-decoration: none;
+  margin-left: 5px;
 }

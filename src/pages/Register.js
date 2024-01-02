@@ -25,11 +25,11 @@ function Register() {
   const register = async () => {
     try {
       var x = await account.create('unique()', email, password, name)
-      var session = await account.createEmailSession(email,password);
-      var emaillink = await account.createVerification('https://newproject-tau-brown.vercel.app/Verify')
-      alert('A verification link as been sent to this email address, click the link to verify your account.')
-      // console.log(x)
-      // Navigate('/Login')
+      console.log(x)
+      // var session = await account.createEmailSession(email,password);
+      // var link = await account.createVerification('https://newproject-medinahakinsowon.vercel.app/Verify')
+      // alert('A verification link as been sent to this email address, click the link to verify your account.')
+       Navigate('/Login')
     }
     catch (e) {
       if(e.type === 'user_already_exists'){

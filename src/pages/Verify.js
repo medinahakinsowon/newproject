@@ -18,10 +18,11 @@ const Verify = () => {
     }
   }
   update();
+  
   return (
-    <h1 className="verify_body">
-      Your Account is verified, proceed to<a href='/Login'>Login</a>
-    </h1>
+    <div className="verify_body">
+      Your Account is verified, proceed to <a href='/Login'> Login</a>
+    </div>
   )
 }
 

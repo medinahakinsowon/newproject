@@ -27,9 +27,9 @@ const Dashboard = () => {
   const isLogin = async () => {
     try {
       var x = await account.get('current')
-      if(x.emailVerification === false){
-        Navigate('/Login')
-      }
+      // if(x.emailVerification === false){
+      //   Navigate('/Login')
+      // }
       setEmail(x.email);
       setName(x.name);
       viewAllNotes();
